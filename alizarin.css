@@ -1,0 +1,195 @@
+html {
+  background: #c3cbc5;
+  margin: 0;
+  height: 100%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 700px;
+}
+body{
+  counter-reset: slide;
+  --main-color: #fff;
+--accent-color: #02AA33;
+--text-color: #000;
+--bgcolor: #eee;
+--text-size: 2rem;
+}
+section{
+  position: relative;
+  background-color: var(--bgcolor);
+color: var(--accent-color);
+}
+section header {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  font-size: var(--text-size);
+  }
+  section p {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    }
+  
+section:after {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  counter-increment: slide;
+  content: counter(slide);
+  display: block;
+  float: right;
+  margin-top: -1em;
+  height: 1.6em;
+  width: 1.6em;
+  background-color: #E9D8AD;
+border-radius: 50%;
+color: #fff;
+font-size: 1.2em;
+font-style: italic;
+font-weight: 800;
+text-align: center;
+line-height: 1.4em;
+}
+
+  
+
+article{
+  font-family: Verdana, "DejaVu Sans";
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 800px;
+  background: #fcfcfc;
+  overflow: hidden;
+  outline: solid;
+}
+p{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  text-align: center;
+  outline: dashed ;
+}
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+.alizarin{
+  display: grid;
+}
+.window{
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin: auto;
+  margin-top: 1rem;
+  min-width: 500px;
+}
+.window1{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas: "headerBar" "mainContent";
+  grid-template-rows: minmax(2rem,4rem) 400px;
+  grid-template-columns: auto;
+  align-content: stretch;
+}
+.window2{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas:"headerBar" "mainContent" ;
+  grid-template-rows: minmax(2rem,4rem) 360px 2rem;
+  grid-template-columns: auto;
+  align-content: stretch;
+}
+.window3{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas:
+  "headerBar" 
+  "leftContent" "rightContent";
+  grid-template-rows: minmax(2rem,4rem) 360px 2rem;
+  grid-template-columns: auto auto;
+  align-content: stretch;
+}
+.window4{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas:
+  "headerBar" 
+  "leftContent" "rightContent";
+  grid-template-rows: minmax(2rem,4rem) 360px 2rem;
+  grid-template-columns: auto auto auto;
+  align-content: stretch;
+}
+.window3 .headerBar{
+  grid-column: 1 / 5;
+  grid-row: 1;
+}
+.window4 .headerBar{
+  grid-column: 1 / 5;
+  grid-row: 1;
+}
+.window3 .slideNo{
+  grid-column: 1 / 5;
+  grid-row: 4;
+}
+.window4 .slideNo{
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.headerBar{
+  grid-column: headerBar;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  background-color: tomato;
+  color: white;
+  font-size: xx-large;
+  width: 100%;
+}
+.slideNo{
+  background-color: tomato;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  outline: solid;
+}
+.rightContent{
+  outline: dashed;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 80%;
+  margin-left: 2rem;
+  grid-column: 2/3;
+  grid-row: 2;
+  width: 90%;
+}
+.leftContent{
+  outline: dashed;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 80%;
+  margin-right: 2rem;
+  grid-column:1 ;
+  width: 90%;
+}
+.statusBar{
+  outline: dashed;
+  grid-column: 1 / 4;
+  grid-row: 4;
+  margin-bottom: 2rem;
+}
+.p1{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 80%;
+}
